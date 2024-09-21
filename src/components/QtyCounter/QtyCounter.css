@@ -1,0 +1,30 @@
+.qtyCounter{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+    width: 100px;
+    height: 30px;
+}
+.Increment{
+    width: 30%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    color: green;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Decrement{
+    width: 30%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    color: red;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,106 @@
+/* .body{
+    width: 100%;
+    background-color: aqua;
+    height: 100%;
+}
+
+video{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.404);
+    background-blend-mode: darken;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.videoTxt{
+    width: 900px;
+    height: 300px;
+    background-color: coral;
+    border: 3px solid white;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.vidTxt > h1, .vidTxt > h3{
+    color: white;
+}
+.heroSecBtn:hover{
+    background-color: transparent;
+    color: #dd54ff7a;
+    border: 3px solid #eeacff;
+    transition: 2s;
+}
+
+.categories{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: orangered;
+}
+
+
+ */
+
+
+ .body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* padding-top: 50px; */
+}
+
+.vidTxt {
+    position: relative;
+    z-index: 2; /* Make sure the text is on top of the video */
+    width: 100%;
+    max-width: 900px;
+    padding: 60px;
+    /* margin-top: 50px; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.vidTxt > h1, .vidTxt > h3 {
+    margin: 0;
+}
+
+.categories {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: orangered;
+}

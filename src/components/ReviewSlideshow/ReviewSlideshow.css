@@ -1,0 +1,25 @@
+.review-slideshow {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-card {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .review-text {
+    font-size: 1.5rem;
+    color: #343a40;
+  }
+  
+  .review-author {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+  }
+  

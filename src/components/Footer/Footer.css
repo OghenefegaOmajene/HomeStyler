@@ -1,0 +1,253 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+footer {
+    background-color: #4c0b5c;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 400px;
+}
+
+footer::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100px;
+    height: 1px;
+    width: 100%;
+    /* background: #ff1dff; */
+}
+.footerContent{
+    max-width: 1250px;
+    margin: auto;
+    height: 100%;
+    /* border: 5px solid crimson; */
+}
+
+.footerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footerlogo {
+    color: #fff;
+    font-size: 30px;
+    /* background-color: red; */
+    /* border: 3px solid whitesmoke; */
+    width: 270px;
+    height: 100px;
+}
+.footerlogo > img{
+    /* background-color: wheat; */
+    width: 100%;
+    height: 100%;
+}
+
+.social{
+    gap: 20px;
+    display: flex;
+}
+
+.social i{
+    font-size: 25px;
+    color: white;
+}
+
+/* .socialLogo svg:nth-child(1){
+    background: #812a2a;
+    color: #426782;
+}
+
+.socialLogo svg:nth-child(1):hover{
+    color: #fff;
+    background: #426782;
+}
+
+.socialLogo svg:nth-child(2){
+    background: #1DA1F2;
+}
+
+.socialLogo svg:nth-child(2):hover{
+    color: #1DA1F2;
+    background: #fff;
+}
+
+.socialLogo svg:nth-child(3){
+    color: #fff;
+    background: #E1306C;
+}
+
+.socialLogo svg:nth-child(3):hover{
+    background: #fff;
+    color: #E1306C;
+}
+
+.socialLogo svg:nth-child(4){
+    color: #fff;
+    background: #0077B5;
+}
+
+.socialLogo svg:nth-child(4):hover{
+    background: #fff;
+    color: #0077B5;
+}
+
+.socialLogo svg:nth-child(5){
+    background: #FF0000;
+}
+
+.socialLogo svg:nth-child(5):hover{
+    color: #FF0000;
+    background: #fff;
+} */
+
+/* **socialLogoanimation* */
+
+.Btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    /* position: relative; */
+    /* overflow: hidden; */
+    /* border-radius: 7px; */
+    cursor: pointer;
+  }
+  
+  
+  
+
+.footerBottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.box{
+    /* border: 3px solid rgb(10, 2, 2); */
+    width: calc(100% / 5 - 10px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#headlink{
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#headlink::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 35px;
+    background: #fff;
+}
+
+
+.box a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: all 0.4s ease;
+}
+
+.box a:hover{
+    opacity: 1;
+}
+
+.footerBottom .input-box{
+    margin-right: 55px;
+}
+
+.footerBottom .input-box input{
+    height: 40px;
+    width: calc(100% + 55px);
+    outline: none;
+    border: 2px solid #AFAF86;
+    background: #2e9d68d7;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+
+/* ---Mobile responsiveness---- */
+@media screen and (max-width: 1000px) {
+    .footerBottom{
+        padding-right: 70px;
+    }
+    #headlink, .box > a{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    #headlink, .box > a{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer{
+        height: 130vh;
+    }
+    .footerTop, .footerBottom{
+        display: flex;
+        flex-direction: column ;
+    }
+    .footerBottom{
+        align-items: center;
+        justify-content: start;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .box{
+        /* border: 3px solid white; */
+        height: 150px;
+        width: 220px;
+        text-align: center;
+    }
+    #headlink::before{
+        left: 93px;
+    }
+    footer::before{
+        top: 150px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .Btn > i{
+        font-size: 18px;
+    }
+    .social{
+        gap: 0px;
+    }
+}
