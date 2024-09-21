@@ -14,8 +14,18 @@ footer {
     bottom: 0;
     left: 0;
     height: 400px;
+    animation: fadeFromBottom 10s ease-in-out;
 }
-
+@keyframes fadeFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(50px); /* Start 50px below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move to the original position */
+    }
+}
 footer::before{
     content: '';
     position: absolute;

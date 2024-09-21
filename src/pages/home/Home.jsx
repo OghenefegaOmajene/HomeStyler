@@ -16,9 +16,7 @@ import { PiChampagneFill } from "react-icons/pi";
 import { useForm } from 'react-hook-form';
 import { MdMail } from 'react-icons/md';
 import Swal from 'sweetalert2';
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+
 
 const Home = ({addToCart}) => {
   const {register, handleSubmit, formState: {errors}} = useForm();
@@ -57,20 +55,20 @@ const Home = ({addToCart}) => {
 
 
       <div className="portfolio">
-          <div className="portfolioCard">
+          <div className="portfolioCard" id='portfolioCard1'>
               <i className='portfolioIcon'><GiPaintRoller /></i>
               <Counter stopAt={100}></Counter><FaPlus />
               <p>Completed Projects</p>
           </div>
 
-          <div className="portfolioCard">
+          <div className="portfolioCard" id='portfolioCard2'>
             <i className='portfolioIcon'><FaUsers/></i>
             <Counter stopAt={258}></Counter>
             <FaPlus />
             <p> Employees</p>
           </div>
 
-          <div className="portfolioCard">
+          <div className="portfolioCard" id='portfolioCard3'>
             <i className='portfolioIcon'><HiEmojiHappy /></i>
             <Counter stopAt={367}></Counter>
             <FaPlus/>
@@ -93,19 +91,19 @@ const Home = ({addToCart}) => {
         
         <div className="whyUsBox">
 
-            <div className="box1">
+            <div className="box1" id='box1'>
               <i><PiChampagneFill /></i>
               <h1>Unique & Trendy Designs at your Fingertips</h1>
               <p>We offer a unique selection of home decor that combines beauty with functionality. Our collection is tailored to enhance your living space with timeless and trendy items you won’t find anywhere else.</p>
             </div>
 
-            <div className="box1">
+            <div className="box1" id="box2">
               <i><BiSolidShoppingBags /></i>
               <h1>Affordable Luxury</h1>
               <p>We believe that stylish, high-quality home decor should be accessible to everyone. That’s why we offer a range of price points, ensuring you can find beautiful pieces that fit your budget.</p>
             </div>
 
-            <div className="box1">
+            <div className="box1" id='box3'>
               <i><FaUserTie /></i>
               <h1>Exceptional Customer Service</h1>
               <p>Your satisfaction is our top priority. Our friendly and knowledgeable customer service team is always ready to assist with any questions or concerns, ensuring a seamless shopping experience from start to finish.</p>

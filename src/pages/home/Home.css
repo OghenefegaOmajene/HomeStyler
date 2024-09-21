@@ -7,6 +7,7 @@
     flex-direction: column;
     /* gap: 5%; */
 }
+
 .goldStar{
     color: gold;
 }
@@ -18,12 +19,52 @@
     padding-top: 100px;
     align-items: start;
     justify-content: start;
-    animation: animate 16s ease-in-out infinite;
+    animation: animate 16s ease-in-out infinite, fadeIn 4s ease-in-out;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.404);
     background-blend-mode: darken;
     /* margin-bottom: 50px; */
 }
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes fadeFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(50px); /* Start 50px below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move to the original position */
+    }
+}
+  
+@keyframes fadeLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+@keyframes fadeRight {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }  
+  
 @keyframes animate{
     0%, 100%{
         background-image: url('../../img/black-kitchen.webp');
@@ -50,6 +91,15 @@
 .heroSecTxt > h1, .heroSecTxt > h3{
     color: white;
 }
+.heroSecTxt > h1{
+    animation: fadeLeft 2s ease-in-out;
+}
+.heroSecTxt > h3{
+    animation: fadeLeft 3s ease-in-out;
+}
+.heroSecBtn{
+    animation: fadeLeft 4s ease-in-out;
+}
 .heroSecBtn:hover{
     background-color: transparent;
     color: #dd54ff7a;
@@ -67,6 +117,7 @@
     align-items: center;
     gap: 2%;
     padding: 10px;
+    animation: fadeFromBottom 6s ease-in-out;
     /* margin-bottom: 50px; */
 }
 .portfolioCard {
@@ -80,31 +131,18 @@
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  /* .portfolioCard::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 3%;
-    width: 95%;
-    height: 40%;
-    background-color: #212121;
-    transition: 0.5s;
-    transform-origin: center;
-  } */
-  
-  /* .portfolioCard::before {
-    content: "";
-    transform-origin: center;
-    position: absolute;
-    top: 80%;
-    left: 3%;
-    width: 95%;
-    height: 40%;
-    background-color: #212121;
-    transition: 0.5s;
-  } */
+}
+#portfolioCard1{
+    animation: fadeLeft 2s ease-in-out;
+}
+#portfolioCard2{
+    animation: fadeFromBottom 3s ease-in-out;
+}
+#portfolioCard3{
+    animation: fadeRight 4s ease-in-out;
+}
+
+
   
   .portfolioCard:hover::before, .portfolioCard:hover::after {
     transform: scale(0)
@@ -132,45 +170,6 @@
 }
 
 
-/* --Review Section */
-.reviews{
-    width: 100%;
-    height: 400px;
-    /* border: 3px solid black; */
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-    gap: 2%;
-    background-color: #4c0b5c;
-    padding-left: 30px;
-    padding-right: 30px;
-    /* background-color: coral; */
-    /* overflow-x: scroll; */
-}
-.reviewTxt{
-    /* background-color: aliceblue; */
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    display: flex;
-    align-items: end;
-    justify-content: center;
-}
-.reviewTxt > h1{
-    color: whitesmoke;
-}
-.reviewCards{
-    /* background-color: aquamarine; */
-    height: 80%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2%;
-}
-
 
 /* --Popular Designs Section */
 .popularDesigns{
@@ -182,11 +181,18 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    animation: fadeLeft 7s ease-in-out;
     /* padding-top: 20px; */
     /* overflow-x: scroll; */
 }
+.popularDesigns > h1{
+    animation: fadeFromBottom 3s ease-in-out;
+    
+}
 
 
+
+/* ---whyUs section */
 .whyUs{
     width: 100%;
     height: 550px;
@@ -197,6 +203,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeRight 8s ease-in-out;
 }
 .whyUsIntro{
     /* border: 2px solid whitesmoke; */
@@ -206,6 +213,7 @@
     display: flex;
     /* align-items: start; */
     justify-content: center;
+    animation: fadeIn 3s ease-in-out;
 }
 .whyUsBox{
     width: 100%;
@@ -215,6 +223,15 @@
     justify-content: center;
     gap: 4%;
     align-items: center;
+}
+#box1{
+    animation: fadeLeft 3s ease-in-out;
+}
+#box2{
+    animation: fadeIn 4s ease-in-out;
+}
+#box3{
+    animation: fadeRight 5s ease-in-out;
 }
 .box1{
     height: 90%;
@@ -268,6 +285,48 @@
 
 
 
+/* --Review Section */
+.reviews{
+    width: 100%;
+    height: 400px;
+    /* border: 3px solid black; */
+    display: flex;
+    flex-direction: column;
+    animation: fadeLeft 9s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    background-color: #4c0b5c;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* background-color: coral; */
+    /* overflow-x: scroll; */
+}
+.reviewTxt{
+    /* background-color: aliceblue; */
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.reviewTxt > h1{
+    color: whitesmoke;
+    animation: fadeFromBottom 3s ease-in-out;
+}
+.reviewCards{
+    /* background-color: aquamarine; */
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+
+
 /* ----feedback */
 .feedback{
     width: 100%;
@@ -275,6 +334,7 @@
     background-color: black;
     display: flex;
     justify-content: space-evenly;
+    animation: fadeRight 9s ease-in-out;
 }
 .feedbackTxt{
     width: 50%;
@@ -285,6 +345,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    
     /* align-items: center; */
 }
 #feedbackSpan{
@@ -292,6 +353,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 50px;
+    animation: fadeIn 4s ease-in-out;
+}
+.feedbackTxt > p{
+    animation: fadeLeft 3s ease-in-out;
+}
+.feedbackTxt > ul > li{
+    animation: fadeFromBottom 3s ease-in-out;
 }
 form{
     display: flex;
@@ -304,6 +372,7 @@ form{
     background-color: transparent;
     padding-top: 30px;
     margin-top: 50px;
+    animation: fadeRight 3s ease-in-out;
 }
 form> div{
     width: 80%;
