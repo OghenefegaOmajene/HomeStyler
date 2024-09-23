@@ -1,0 +1,54 @@
+.designStyleProducts {
+    display: flex;
+    flex-direction: column; /* Stack product columns vertically */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.productColumn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 1250px) {
+    .productColumn {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .productColumn > div {
+        flex-basis: 45%; /* Adjust the size of product cards */
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .productColumn {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Stack products vertically */
+    }
+
+    .productColumn > div {
+        flex-basis: 100%; /* Make product cards full-width */
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .productColumn {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .productColumn > div {
+        flex-basis: 100%; /* Full-width product cards for smaller screens */
+        margin-bottom: 15px;
+    }
+}

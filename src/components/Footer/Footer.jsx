@@ -22,23 +22,23 @@ const Footer = () => {
 
                 <div className='social'>
                     <button className="Btn">
-                        <i><FaGithub/></i>                  
+                        <i><a href="https://github.com/OghenefegaOmajene/"><FaGithub/></a></i>                  
                     </button>
 
                     <button className="Btn">
-                        <i><FaLinkedin/></i>                  
+                        <i><a href="https://www.linkedin.com/in/oghenefega-omajene-0291b12a9/"><FaLinkedin/></a></i>         
                     </button>
 
                     <button className="Btn">
-                        <i><FaFacebook/></i>               
+                        <i><a href=""><FaFacebook/></a></i>              
                     </button>
 
                     <button className="Btn">
-                        <i><FaInstagram/></i>
+                        <i><a href=""><FaInstagram/></a></i>
                     </button>
 
                     <button className="Btn">
-                        <i><BsTwitterX/></i>
+                        <i><a href=""><BsTwitterX/></a></i>
                     </button>
                 </div>
 

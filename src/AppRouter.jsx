@@ -1,52 +1,42 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 import Home from "./pages/home/Home";
 import Navbar from "./components/Navbar/Navbar";
+import About from "./pages/About/About";
 import DesignStyles from "./pages/DesignStyles/DesignStyles";
-import Cart from "./components/Cart/Cart";
+import ProductPage from './pages/ProductPage/ProductPage'
+import Product from './components/Product/Product';
 import { useState } from "react";
+import WishList from './pages/WishList/WishList';
+
 
 const AppRouter = () => {
-  const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (product) => {
-    setCartItems((prevItems) => {
-      const existingItem = prevItems.find(item => item.name === product.name);
-      if (existingItem) {
-        return prevItems.map(item =>
-          item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item
-        );
-      } else {
-        return [...prevItems, { ...product, quantity: 1 }];
-      }
-    });
+  const [wishListItems, setWishListItems] = useState([]);
+
+  const addToWishlist = (product) => {
+    setWishListItems((prevWishlist) => [...prevWishlist, product]);
   };
 
-  const removeFromCart = (productName) => {
-    setCartItems(prevItems => prevItems.filter(item => item.name !== productName));
-  };
-
-  const toggleCart = () => {
-    // You can toggle the cart modal or sidebar here
-  };
-
-  const updateQuantity = (productName, quantity) => {
-    setCartItems((prevItems) =>
-      prevItems.map(item =>
-        item.name === productName ? { ...item, quantity } : item
-      )
-    );
-  };
-
+  
   return (
     <Router>
-      <Navbar cartItemCount={cartItems.length} toggleCart={toggleCart} />
+      <Navbar  />
       <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
         <Route
-          path="/"
-          element={<Home addToCart={addToCart} toggleCart={toggleCart} cartItemCount={cartItems.length} />}
+          path="/Home" 
+          index element={<Home/>}
         />
-        <Route path="/DesignStyles" element={<DesignStyles />} />
-        <Route path="/cart" element={<Cart cartItems={cartItems} toggleCart={toggleCart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/DesignStyles" element={<DesignStyles addToWishlist={addToWishlist} />} />
+        <Route path="/ProductPage" element={<ProductPage addToWishlist={addToWishlist} />} />
+        <Route path="/WishList" element={<WishList wishListItems={wishListItems} />}/>
+    
+        <Route
+          path="/product"
+          element={<Product setWishListItems={setWishListItems} />}
+        />
+
       </Routes>
     </Router>
   );

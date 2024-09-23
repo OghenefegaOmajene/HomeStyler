@@ -1,33 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap'); */
+
 .sideBar{
-    /* background-color: rgb(40, 39, 38); */
-    background-color: rgba(240, 240, 240, 0.299);
-    width: 200px;
-    height: 100vh;
+    /* background-color: rgba(187, 49, 229, 0.658); */
+    /* background-color: rgba(67, 67, 67, 0.463); */
+    width: 300px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     /* gap: 2%; */
     /* text-align: start; */
     align-items: center;
+    padding-left: 30px;
     box-shadow: 3px 5px 20px black;
-    border-radius: 10px;
-    /* padding-top: 40px; */
-}
-*{
-    font-family: "Nerko One", system-ui;
-    /* font-family: "Protest Guerrilla", sans-serif; */
-
+    border-top: 8px solid #9a00c0;
+    border-bottom: 8px solid #9a00c0;
+    /* border-radius: 10px; */
+    padding-top: 60px;
 }
 
-.sideNavLogo{
+.sideBarHeadTxt{
     width: 100%;
-    height: 20%;
+    height: 80px;
     /* border: 3px solid red; */
-}
-.sideNavLogo > img{
-    width: 100%;
-    height: 100%;
+    font-size: 18px;
 }
 .sideNav{
     width: 100%;
@@ -35,35 +29,37 @@
     /* border: 3px solid black; */
     display: flex;
     flex-direction: column;
-    gap: 4%;
+    gap: 12%;
     padding-top: 30px;
     padding-left: 5px;
 }
-.sideNav > button{
-    width: 90%;
-    height: 50px;
-    border: 0;
-    background-color: transparent;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-left: 20px;
+
+.sideNav > a:hover{
+    color: #9a00c0;
 }
-.sideNav > button:hover{
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.769);
-    border-radius: 10px;
-    transition: 1s;
-}
-.sideNav > button:hover > a{
-    color: white;
-}
-.sideNav > button > a{
+.sideNav > a{
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 4%;
     font-size: 20px;
-    color: rgb(97, 134, 10);
+    color: black;
     /* background-color: black; */
+}
+
+
+@media screen and (max-width: 1242px) {
+    .sideBar{
+        height: 500px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .sideBarHeadTxt{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 940px) {
+    .sideBar {
+      display: none;
+    }
 }

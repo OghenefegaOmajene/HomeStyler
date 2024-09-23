@@ -5,12 +5,23 @@ import Swal from "sweetalert2";
 import Button from "../Button/Button";
 
 const Product = (props) => {
-  const handleClick = () => {
-    props.addToCart();
+
+  const handleAddToCart = () => {
     Swal.fire({
       position: "middle",
       icon: "success",
-      title: "Added to Cart Successfully",
+      title: "An Error ocurred when adding your product to the Cart",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+
+  const handleAddToWishList = () => {
+    props.addToWishList();
+    Swal.fire({
+      position: "middle",
+      icon: "success",
+      title: "Added to Wishlist Successfully",
       showConfirmButton: false,
       timer: 1500,
     });
@@ -19,12 +30,11 @@ const Product = (props) => {
   return (
     <div className="Block">
       <div className="productImage">
-        <img src={props.img} alt={props.name} />
-        {/* Add to Cart and Add to Favorites buttons */}
+        <img src={props.img}  />
         <div className="overlay-buttons">
           <Button
             className="addToCartBtn"
-            onClick={handleClick}
+            onClick={handleAddToCart}
             width="40px"
             height="40px"
             backgroundColor="#eeacff"
@@ -33,9 +43,10 @@ const Product = (props) => {
             hoverColor="#eeacff"
             icon={<FaShoppingBasket />}
           />
+
           <Button
             className="addToFavoritesBtn"
-            onClick={() => alert("Added to Favorites")}
+            onClick={handleAddToWishList}
             width="40px"
             height="40px"
             backgroundColor="#f08080"

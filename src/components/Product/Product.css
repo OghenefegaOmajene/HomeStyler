@@ -1,5 +1,5 @@
 .Block {
-    width: 350px;
+    width: 300px;
     height: 300px;
     border-radius: 10px;
     background-color: white;
@@ -68,3 +68,12 @@
     font-family: "Modern Antiqua", serif;
   }
   
+#productName{
+  font-size: 19px;
+}
+
+@media (max-width: 450px) {
+  .Block {
+    width: 250px;
+  }
+}

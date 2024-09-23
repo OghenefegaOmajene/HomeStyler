@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './Home.css';
 // import Navbar from '../../components/Navbar/Navbar';
 import Counter from '../../components/Counter';
-import ProductList from '../../components/ProductList/ProductList';
+import HomeProductList from '../../components/HomeProductList/HomeProductList';
 // import whyUs from '../../img/whyChooseUs.gif';
 import Reviews from '../../components/Reviews/Reviews';
 import Button from '../../components/Button/Button';
@@ -18,7 +18,7 @@ import { MdMail } from 'react-icons/md';
 import Swal from 'sweetalert2';
 
 
-const Home = ({addToCart}) => {
+const Home = () => {
   const {register, handleSubmit, formState: {errors}} = useForm();
 
   const onSubmit = data =>{
@@ -37,7 +37,7 @@ const Home = ({addToCart}) => {
       <div className='heroSec'>
         <div className="heroSecTxt">
           <h1>"Transform Your Interior Space, Elevate Your Style"</h1>
-          <h3>Discover exquisite decor designs that turn every room into a masterpiece. Whether it's a vintage look you desire or something modern, we've got you covered....  <br />Make your dream home come to life with HomeStyler!</h3>
+          <p>Discover exquisite decor designs that turn every room into a masterpiece. Whether it's a vintage look you desire or something modern, we've got you covered....  <br />Make your dream home come to life with HomeStyler!</p>
           {/* <Button style={{width: "300px"}}btnName="View Interior Decor Designs"><i><FaPaintRoller /></i></Button> */}
           <Button className="heroSecBtn"
             width="300px" 
@@ -80,7 +80,7 @@ const Home = ({addToCart}) => {
 
       <div className="popularDesigns">
           <h1>Check out some of the popular designs this season!</h1>
-          <ProductList addToCart={addToCart}></ProductList>
+          <HomeProductList></HomeProductList>
       </div>
 
 
@@ -120,7 +120,7 @@ const Home = ({addToCart}) => {
         <div className="reviewCards">
           {/* <Slider {...settings}> */}
             <Reviews 
-              message='The team brings exquisite decors to your doorstep!' 
+              message='Exquisite decors to your doorstep!' 
               name="Daniels Fega"
               icon={[
                 <FaStar className='goldStar' />,

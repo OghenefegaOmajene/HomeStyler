@@ -1,3 +1,4 @@
+
 .home{
     width: 100%;
     /* height: 500vh; */
@@ -16,7 +17,7 @@
     width: 100%;
     height: 600px;
     display: flex;
-    padding-top: 100px;
+    padding-top: 80px;
     align-items: start;
     justify-content: start;
     animation: animate 16s ease-in-out infinite, fadeIn 4s ease-in-out;
@@ -81,21 +82,22 @@
 }
 .heroSecTxt{
     width: 900px;
-    height: 300px;
+    height: 400px;
     /* border: 3px solid white; */
     padding-left: 60px;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-.heroSecTxt > h1, .heroSecTxt > h3{
+.heroSecTxt > h1, .heroSecTxt > p{
     color: white;
 }
 .heroSecTxt > h1{
     animation: fadeLeft 2s ease-in-out;
 }
-.heroSecTxt > h3{
+.heroSecTxt > p{
     animation: fadeLeft 3s ease-in-out;
+    font-weight: 100;
 }
 .heroSecBtn{
     animation: fadeLeft 4s ease-in-out;
@@ -181,6 +183,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 40px;
     animation: fadeLeft 7s ease-in-out;
     /* padding-top: 20px; */
     /* overflow-x: scroll; */
@@ -203,15 +206,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
     animation: fadeRight 8s ease-in-out;
 }
 .whyUsIntro{
     /* border: 2px solid whitesmoke; */
     width: 100%;
-    height: 70px;
+    height: 100px;
     color: white;
     display: flex;
-    /* align-items: start; */
+    align-items: end;
     justify-content: center;
     animation: fadeIn 3s ease-in-out;
 }
@@ -236,7 +240,7 @@
 .box1{
     height: 90%;
     width: 30%;
-    border: 3px solid saddlebrown;
+    /* border: 3px solid saddlebrown; */
     color: white;
     padding: 20px;
     display: flex;
@@ -357,9 +361,11 @@
 }
 .feedbackTxt > p{
     animation: fadeLeft 3s ease-in-out;
+    font-weight: 100;
 }
 .feedbackTxt > ul > li{
     animation: fadeFromBottom 3s ease-in-out;
+    font-weight: 100;
 }
 form{
     display: flex;
@@ -411,6 +417,9 @@ span{
     .feedback{
         padding: 0 90px;
     }
+    .feedbackTxt > p, .feedbackTxt > ul >li{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -442,14 +451,23 @@ span{
     }
 }
 
+@media screen and (max-width: 960px){
+    .popularDesigns{
+        height: 900px;
+        padding: 0;
+    }
+    .popularDesigns > h1{
+        font-size: 27px;
+    }
+}
 
 @media screen and (max-width: 930px) {
     #feedbackSpan{
-        font-size: 30px;
+        font-size: 40px;
     }
-    .feedbackTxt > p, .feedbackTxt > ul > li{
+    /* .feedbackTxt > p, .feedbackTxt > ul > li{
         font-size: 15px;
-    }
+    } */
 }
 
 @media screen and (max-width: 900px) { 
@@ -493,6 +511,12 @@ span{
 }
 
 
+@media screen and (max-width: 740px) { 
+    .heroSecTxt{
+        height: 100%;
+    }
+}
+
 @media screen and (max-width: 720px) { 
     .portfolio{
         display: flex;
@@ -506,14 +530,24 @@ span{
         flex-direction: column;
         align-items:center ;
     }
+    .popularDesigns{
+        padding-top: 0;
+        padding-bottom: 40px;
+        height: 1200px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 660px) {
-    
-    
     .heroSecTxt{
         height: 500px;
         gap: 20px;
+    }
+    .popularDesigns > h1{
+        font-size: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
 }
 
@@ -557,12 +591,28 @@ span{
     }
 }
 
+
+@media screen and (max-width: 540px) { 
+    .reviewTxt > h1{
+        font-size: 30px;
+    }
+}
+
 @media screen and (max-width: 500px) { 
     .feedback{
         height: 1100px;
     }
     form{
         width: 300px;
+    }
+}
+
+@media screen and (max-width: 450px) { 
+    .heroSecTxt > h1{
+        font-size: 30px;
+    }
+    .heroSecTxt > p{
+        font-size: 20px;
     }
 }
 

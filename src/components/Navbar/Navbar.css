@@ -1,7 +1,11 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 *{
-    font-family: "Poppins", sans-serif;
+    font-family: "Merienda", cursive;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    font-family: "Caudex", serif;
 }
 .navBar{
     width: 100%;
@@ -53,32 +57,25 @@
 #favorites{
     width: 50px;
     height: 50px;
-    background-color: #4c0b5c;
+    /* background-color: #4c0b5c; */
     border-radius: 10px;
     border: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    /* color: black; */
 
 }
-#favorites:hover{
-    background-color: #b917c17e;
-    transition: 2s;
-    
-}
-#favorites:hover > a{
+#favorites:hover >a i{
     color: #4c0b5c;
 }
-#favorites:hover > i{
+#favorites:hover > a i{
     color: crimson;
 }
-#favorites > a{
-    color: white;
+#favorites > a > i{
+    color: black;
     text-decoration: none;
-}
-#favorites > i{
-    color: white;
 }
 
 .menu-toggle {
@@ -193,8 +190,12 @@
 
     }
     .navLogo{
-        width: 300px;
-        /* background-color: blue; */
+        width: 250px;
+        
+    }
+    .navBtn{
+        width: 200px;
+        justify-content: space-around;
     }
 }
 
@@ -218,16 +219,18 @@
 }
 
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px){
+    
+
     
     .navBar{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
 
     }
     .navLogo{
-        width: 250px;
+        width: 200px;
         /* background-color: blue; */
     }
     .navBtn{
@@ -242,12 +245,12 @@
 
 @media screen and (max-width: 450px) {
     
-    .navBar{
+    /* .navBar{
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-    }
+    } */
     .navLogo{
         width: 190px;
         /* background-color: blue; */
@@ -255,9 +258,16 @@
     .navBtn{
         width: 130px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        gap: 10px;
     }
     .menu-toggle{
         width: 80px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .navBtn{
+        width: 150px;
     }
 }
